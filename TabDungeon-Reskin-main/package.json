@@ -1,0 +1,12 @@
+{
+  "name": "tabdungeon",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "evaluate": "node scripts/evaluate-classifier.js scripts/sample-pages.csv scripts/sample-decks.json",
+    "batch-sim": "node scripts/batch-sim.js",
+    "calc-sheet": "node scripts/make-calc-sheet.js",
+    "benchmark:decks": "node scripts/benchmark-decks.js"
+  }
+}

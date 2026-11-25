@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabDungeon Deck Manager</title>
+  <link rel="stylesheet" href="../sidepanel/styles.css">
+  <link rel="stylesheet" href="deck-manager.css">
+</head>
+<body class="manager-page">
+  <main class="deck-manager">
+    <header class="manager-header">
+      <div>
+        <p class="eyebrow">TABDUNGEON STUDY KIT</p>
+        <h1>Deck Manager</h1>
+        <p>Create, organize, and edit your flashcards in a full-size workspace.</p>
+      </div>
+      <button id="back-to-sidepanel" type="button">Back to side panel</button>
+    </header>
+
+    <section class="manager-toolbar">
+      <input id="new-deck-name" type="text" placeholder="New deck topic" autocomplete="off">
+      <button id="add-deck" type="button">+ Create deck</button>
+      <span id="manager-status" aria-live="polite"></span>
+    </section>
+    <section class="manager-controls" aria-label="Deck list controls">
+      <label>Search decks
+        <input id="deck-search" type="search" placeholder="Name, description, or keywords">
+      </label>
+      <label>Show
+        <select id="deck-view">
+          <option value="active">Active decks</option>
+          <option value="archived">Archived decks</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="deck-sort">
+          <option value="name">Name</option>
+          <option value="recent">Recently studied</option>
+          <option value="due">Most due</option>
+        </select>
+      </label>
+    </section>
+
+    <small id="storage-usage" class="storage-usage" aria-live="polite">Checking local storage usage...</small>
+    <section id="manager-decks" class="manager-decks"></section>
+  </main>
+  <script type="module" src="deck-manager.js"></script>
+</body>
+</html>
